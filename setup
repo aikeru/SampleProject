@@ -1,9 +1,9 @@
-#!/bin/sh
-pushd evaluator
+#!/bin/bash
+pushd evaluator/
 npm install
 popd
 
-pushd generator
+pushd generator/
 npm install
 popd
 

@@ -19,12 +19,13 @@
     "gulp-es6-imports-renamer": "^0.1.8",
     "gulp-mocha": "^2.2.0",
     "gulp-watch": "^4.3.5",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "should": "^8.2.2"
   },
   "scripts": {
     "test": "node_modules/.bin/mocha ./tests/bootstrap.tests.jsx",
-	"server": "pushd evaluator && node app.js",
-	"client": "pushd generator && node app.js"
+	"server": "chdir evaluator && node app.js",
+	"client": "chdir generator && node app.js"
   },
   "author": "",
   "license": "ISC"
