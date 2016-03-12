@@ -1,0 +1,5 @@
+.idea/
+node_modules/
+evaluator/**/*.js
+generator/**/*.js
+tests/**/*.js

@@ -1,0 +1,12 @@
+#!/bin/sh
+pushd evaluator
+npm install
+popd
+
+pushd generator
+npm install
+popd
+
+npm install
+
+./node_modules/.bin/gulp babel
