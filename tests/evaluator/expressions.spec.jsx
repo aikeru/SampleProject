@@ -17,14 +17,14 @@ describe("expressions.parseExpression", () => {
         should(result.operator).equal(operators.byName.MINUS);
     });
 
-    it('should parse a subtraction expression', () => {
+    it('should parse a multiplication expression', () => {
         let result = expressions.parseExpression('4*4=');
         should(result.left).equal(4);
         should(result.right).equal(4);
         should(result.operator).equal(operators.byName.MULTIPLY);
     });
 
-    it('should parse a subtraction expression', () => {
+    it('should parse a division expression', () => {
         let result = expressions.parseExpression('4/4=');
         should(result.left).equal(4);
         should(result.right).equal(4);
