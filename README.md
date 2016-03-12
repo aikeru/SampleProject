@@ -17,3 +17,13 @@ Mocha is used to test both of these services.
 ## Development
 
 For TDD workflow, start `gulp watch-test` from the root of the project. Gulp will watch the `.jsx` files and rerun the tests when changes occur. Tests are transpiled on-the-fly, and must have a `require()` call in `./tests/bootstrap.tests.jsx`.
+
+## UML Diagrams
+
+There are three UML diagrams included with this project.
+
+* Evaluator Generator Sequence (Sequence Diagram)
+* Evaluator Service (Activity Diagram)
+* Generator Service (Activity Diagram)
+
+These all reside under the `UML` folder in this repository and were created using the free online draw.io tool.
