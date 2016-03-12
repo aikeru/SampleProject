@@ -1,4 +1,5 @@
 import * as expressions from './expressions.jsx';
+import {log, logLevels} from '../../shared/logger.jsx';
 
 export default class ExpressionRequestHandler {
     constructor() {
@@ -14,9 +15,9 @@ export default class ExpressionRequestHandler {
         }
         let queryString = request.url.substring(request.url.indexOf('?') + 1);
         let expression = this.expressions.parseExpression(queryString);
-        console.log('Received request to process', expression.left, expression.operator, expression.right);
+        log(logLevels.INFO, 'Received request to process', expression.left, expression.operator, expression.right);
         let result = this.expressions.evaluateExpression(expression);
-        console.log('Sending result', result);
+        log(logLevels.INFO, 'Sending result', result);
         response.end('' + result);
     }
 }

@@ -1,14 +1,20 @@
+//Really could switch this out for something like winston
 export var logLevels = {
     NONE: "NONE",
-    DEBUG: "DEBUG"
+    DEBUG: "DEBUG",
+    INFO: "INFO"
 };
 
-let logLevel = logLevels.DEBUG;
+let currentLogLevel = logLevels.DEBUG;
 
 export function setLogLevel(newLevel) {
-    logLevel = newLevel;
+    currentLogLevel = newLevel;
 }
 
-export function debug(debugText) {
-    console.log(debugText);
+export function log(logLevel, ...message) {
+    if(currentLogLevel === logLevels.NONE) { return; }
+    if(currentLogLevel === logLevels.INFO) {
+        if(logLevel === logLevels.DEBUG) { return; }
+    }
+    console.log.apply(console, [logLevel].concat(message));
 }
